@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="increase(3)">Click me!</button>
+        <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinate">Coordinates: {{x}}/{{y}
+            -<span v-on:mousemove.stop="">DEAD SPOT</span>}</p>
+            <input type="text" v-on:keyup.enter="alertMe">
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="script.js"></script>
+</html>
