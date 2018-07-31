@@ -1,6 +1,6 @@
 <template>
 <div>
-    <app-server-status v-for="s in 5"></app-server-status>
+    <!-- <app-server-status v-for="s in 5"></app-server-status> -->
 </div>
 </template>
 
