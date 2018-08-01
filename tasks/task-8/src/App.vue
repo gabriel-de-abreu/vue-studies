@@ -22,14 +22,15 @@
                             <h1>User Data</h1>
                         </div>
                     <div class="panel-body">
-                    <div class = "form-group">
+                    <!-- <div class = "form-group">
                         <label for="firstName">First Name</label>
                         <input id="firstName" class = "form-control" type="text" v-model='firstName'>
                     </div>
                     <div class="form-group">
                         <label for="lastName">Last Name</label>
                         <input id="lastName" class = "form-control"  type="text" v-model="lastName">
-                    </div>
+                    </div> -->
+                    <app-name v-model="fullName"></app-name>
                     <div class = "form-group">
                         <label for="email">Email</label>
                         <input type="text" id="email" class="form-control" v-model="mail">
@@ -67,7 +68,7 @@
                         <h4>Your Data</h4>
                     </div>
                     <div class="panel-body">
-                        <p>Full Name: {{firstName}} {{lastName}}</p>
+                        <p>Full Name: {{fullName}}</p>
                         <p>Mail: {{mail}} </p>
                         <p>Password: {{password}} </p>
                         <p>Store in Database?: {{store}} </p>
@@ -79,18 +80,21 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      firstName: "",
-      lastName: "",
-      mail: "",
-      password: "",
-      store: "Yes",
-      sent: false
+    import appName from './components/Name.vue'
+    export default {
+        data() {
+            return {
+            fullName:'',
+            mail: "",
+            password: "",
+            store: "Yes",
+            sent: false
+            };
+        },
+        components:{
+            appName
+        }
     };
-  }
-};
 </script>
 
 <style>
